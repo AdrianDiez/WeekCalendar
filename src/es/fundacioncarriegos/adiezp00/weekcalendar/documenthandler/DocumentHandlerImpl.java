@@ -109,10 +109,8 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
     public boolean parseToPDF() {
         boolean result;
         try {
-            String text = this.readAll();
-            String[] arrayText = text.split("\n");
-            System.out.println(this.doc.getFile().getAbsolutePath());
-            OutputStream PDFFile = new FileOutputStream(new File("/Users/adrian/Desktop/document.pdf"));
+            String[] arrayText = this.parseToArray();
+            OutputStream PDFFile = new FileOutputStream(new File(this.doc.getPath() + "WeekCalendar.pdf"));
             PdfWriter.getInstance(this.PDFDocument, PDFFile);
             this.PDFDocument.open();
             for(String oneLine : arrayText) {
@@ -126,7 +124,20 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
         return result;
     }
 
+    /**
+     * Change the format of one text flow separated by "\n".
+     *
+     * @return the correspondant array.
+     */
+    private String[] parseToArray() {
+        return this.readAll().split("\n");
+    }
 
+    /**
+     * Getter of the PDF Document.
+     *
+     * @return PDFDocument.
+     */
     public Document getPDFDocument() {
         return PDFDocument;
     }

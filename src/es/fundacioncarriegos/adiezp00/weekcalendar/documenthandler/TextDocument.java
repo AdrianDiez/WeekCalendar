@@ -19,6 +19,8 @@ public class TextDocument {
     /** The buffer to write */
     private PrintWriter printWritter;
 
+    private String path;
+
 
     /**
      * Complex constructor
@@ -28,10 +30,11 @@ public class TextDocument {
      * @throws IOException
      */
     public TextDocument(String path, String content) throws IOException {
-        this.file = new File(path + "name.txt");
+        this.path = path;
+        this.file = new File(this.path + "temp.txt");
         if(!this.file.exists()) {
-            if(this.file.createNewFile()) {
-                System.exit(1);
+            if(!this.file.createNewFile()) {
+                System.exit(0);
             }
         }
         this.printWritter = new PrintWriter(new FileWriter(this.file));
@@ -45,7 +48,8 @@ public class TextDocument {
      * @throws IOException
      */
     public TextDocument(String path) throws IOException {
-        this.file = new File(path);
+        this.path = path;
+        this.file = new File(this.path + "temp.txt");
         if(this.file.exists()) {
             this.printWritter = new PrintWriter(new FileWriter(this.file));
         } else {
@@ -54,17 +58,21 @@ public class TextDocument {
     }
 
     /**
-     * Simply constructor.
+     * Getter of path
      *
-     * @throws IOException
+     * @return the path
      */
-    public TextDocument() throws IOException {
-        this.file = new File("WeekCalendar.doc");
-        if(this.file.exists()) {
-            this.printWritter = new PrintWriter(new FileWriter(this.file));
-        } else {
-            this.printWritter = null;
-        }
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
+     * Getter of File
+     *
+     * @return the file
+     */
+    public File getFile() {
+        return this.file;
     }
 
     /**
@@ -108,15 +116,6 @@ public class TextDocument {
      */
     public boolean delete() {
         return this.file.delete();
-    }
-
-    /**
-     * Getter of File
-     *
-     * @return the file
-     */
-    public File getFile() {
-        return this.file;
     }
 
     public String readLine() {

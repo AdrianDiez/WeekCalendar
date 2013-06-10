@@ -17,7 +17,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException, DocumentException {
-        TextDocument td = new TextDocument("/Users/adrian/Desktop/","Esto es una prueba muy chachi.");
+        TextDocument td = new TextDocument("/Users/adrian/Desktop/","Prueba del calendario de producción.");
         DocumentHandlerInterface dh = new DocumentHandlerImpl(td);
         dh.parseToPDF();
         td.delete();
