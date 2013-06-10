@@ -138,7 +138,7 @@ public class TextDocument {
      * @return the lines separated by "/n".
      */
     public String readAll(){
-        String result = "";
+        String result;
         BufferedReader bufferedReader;
         try {
             bufferedReader = new BufferedReader(new FileReader(this.file));
