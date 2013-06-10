@@ -2,7 +2,6 @@ package es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler;
 
 
 import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -31,7 +30,7 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
      */
     public DocumentHandlerImpl(TextDocument doc) {
         this.setDocument(doc);
-        this.PDFDocument = new Document(PageSize.A4_LANDSCAPE);
+        this.PDFDocument = new Document(PageSize.A4.rotate());
     }
 
     /**
@@ -51,14 +50,14 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
     }
 
     /**
-     * Save the current document in the system.
+     * Write the content in the file.
      *
+     * @param content String.
      * @return true if all is correct, false in other case.
      */
     @Override
-    public boolean write() {
-        boolean result = false;
-        return result;
+    public boolean write(String content) {
+        return this.doc.write(content);
     }
 
     /**
@@ -87,15 +86,18 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
      * @return the String.
      */
     @Override
-    public String read() throws IOException {
-        String result = "";
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(this.doc.getFile()));
-        String line = "";
-        while((line = bufferedReader.readLine()) != null) {
-            result += line + "\n";
-        }
+    public String read() {
+        return this.doc.readLine();
+    }
 
-        return result;
+    /**
+     * Read all the document.
+     *
+     * @return the String
+     */
+    @Override
+    public String readAll() {
+        return this.doc.readAll();
     }
 
     /**
@@ -107,12 +109,12 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
     public boolean parseToPDF() {
         boolean result;
         try {
-            Document PDFDocument = new Document(PageSize.A4_LANDSCAPE);
-            FileOutputStream ficheroPdf = new FileOutputStream(this.doc.getFile().getAbsolutePath());
-            PdfWriter.getInstance(PDFDocument, ficheroPdf).setInitialLeading(10);
-            PDFDocument.open();
-            String text = this.read();
+            String text = this.readAll();
             String[] arrayText = text.split("\n");
+            System.out.println(this.doc.getFile().getAbsolutePath());
+            OutputStream PDFFile = new FileOutputStream(new File("/Users/adrian/Desktop/document.pdf"));
+            PdfWriter.getInstance(this.PDFDocument, PDFFile);
+            this.PDFDocument.open();
             for(String oneLine : arrayText) {
                 PDFDocument.add(new Paragraph(oneLine));
             }

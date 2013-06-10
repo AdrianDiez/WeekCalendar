@@ -1,9 +1,6 @@
 package es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,7 +17,8 @@ public class TextDocument {
     private File file;
 
     /** The buffer to write */
-    private BufferedWriter bufferedWriter;
+    private PrintWriter printWritter;
+
 
     /**
      * Complex constructor
@@ -31,14 +29,13 @@ public class TextDocument {
      */
     public TextDocument(String path, String content) throws IOException {
         this.file = new File(path + "name.txt");
-        if(this.file.exists()) {
-            this.bufferedWriter = new BufferedWriter(new FileWriter(this.file));
-            //TODO comprobar porque no lo escribe si paso por write. Reabrir el fichero!!!
-            System.out.println(content);
-            this.writeAndClose(content);
-        } else {
-            this.bufferedWriter = null;
+        if(!this.file.exists()) {
+            if(this.file.createNewFile()) {
+                System.exit(1);
+            }
         }
+        this.printWritter = new PrintWriter(new FileWriter(this.file));
+        this.writeAndClose(content);
     }
 
     /**
@@ -50,9 +47,9 @@ public class TextDocument {
     public TextDocument(String path) throws IOException {
         this.file = new File(path);
         if(this.file.exists()) {
-            this.bufferedWriter = new BufferedWriter(new FileWriter(this.file));
+            this.printWritter = new PrintWriter(new FileWriter(this.file));
         } else {
-            this.bufferedWriter = null;
+            this.printWritter = null;
         }
     }
 
@@ -64,9 +61,9 @@ public class TextDocument {
     public TextDocument() throws IOException {
         this.file = new File("WeekCalendar.doc");
         if(this.file.exists()) {
-            this.bufferedWriter = new BufferedWriter(new FileWriter(this.file));
+            this.printWritter = new PrintWriter(new FileWriter(this.file));
         } else {
-            this.bufferedWriter = null;
+            this.printWritter = null;
         }
     }
 
@@ -77,12 +74,8 @@ public class TextDocument {
      */
     public boolean close() {
         boolean result;
-        try {
-            this.bufferedWriter.close();
-            result = true;
-        } catch (IOException e) {
-            result = false;
-        }
+        this.printWritter.close();
+        result = true;
         return result;
     }
 
@@ -94,12 +87,8 @@ public class TextDocument {
      */
     public boolean write(String content) {
         boolean result;
-        try {
-            this.bufferedWriter.write(content);
-            result = true;
-        } catch (IOException e) {
-            result = false;
-        }
+        this.printWritter.write(content);
+        result = true;
         return result;
     }
 
@@ -128,5 +117,40 @@ public class TextDocument {
      */
     public File getFile() {
         return this.file;
+    }
+
+    public String readLine() {
+        String result;
+        BufferedReader bufferedReader;
+        try {
+            bufferedReader = new BufferedReader(new FileReader(this.file));
+            if((result = bufferedReader.readLine()) == null) {
+                result = "";
+            }
+        } catch (Exception e) {
+            result = "readAllException";
+        }
+        return result;
+    }
+
+    /**
+     * Read all the lines in the file.
+     *
+     * @return the lines separated by "/n".
+     */
+    public String readAll(){
+        String result = "";
+        BufferedReader bufferedReader;
+        try {
+            bufferedReader = new BufferedReader(new FileReader(this.file));
+            String line;
+            while((line = bufferedReader.readLine()) != null) {
+                result += line + "\n";
+            }
+        } catch (Exception e) {
+            result = "readAllException";
+        }
+
+        return result;
     }
 }

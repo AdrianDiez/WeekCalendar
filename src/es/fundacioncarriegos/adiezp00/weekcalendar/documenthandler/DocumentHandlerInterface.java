@@ -4,7 +4,6 @@ package es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler;
 import com.itextpdf.text.DocumentException;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -28,11 +27,12 @@ public interface DocumentHandlerInterface {
     public void setDocument(TextDocument doc);
 
     /**
-     * Save the current document in the system.
+     * Write the content in the file.
      *
+     * @param content String.
      * @return true if all is correct, false in other case.
      */
-    public boolean write();
+    public boolean write(String content);
 
     /**
      * Delete the current document in the system.
@@ -53,7 +53,14 @@ public interface DocumentHandlerInterface {
      *
      * @return the String.
      */
-    public String read() throws IOException;
+    public String read();
+
+    /**
+     * Read all the document.
+     *
+     * @return the String
+     */
+    public String readAll();
 
     /**
      * Change the type of the file to PDF format.
