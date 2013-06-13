@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a30de2a-e750-421d-a896-0e3b19029bb3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/MySQLConnection.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/itext_pdfa_5_4_2_javadoc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerImpl.java" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerInterface.java" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/TextDocument.java" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/TextDocument.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeekCalendar.iml" afterPath="$PROJECT_DIR$/WeekCalendar.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -18,14 +13,14 @@
     <file path="/fragment.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370973297654" ignored="false" />
     <file path="/DocumentHandlerImpl.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370967953319" ignored="false" />
     <file path="/Document.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370626834215" ignored="false" />
-    <file path="/Main.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371139748674" ignored="false" />
+    <file path="/Main.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371142530934" ignored="false" />
     <file path="/TextDocument.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370967689332" ignored="false" />
-    <file path="/Dummy.txt" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371139827270" ignored="false" />
+    <file path="/Dummy.txt" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371139927951" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/relaxng.rng" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370963629707" ignored="false" />
     <file path="/Connection.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370971489820" ignored="false" />
     <file path="/MySQLConnection.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370973579347" ignored="false" />
-    <file path="/DataHandlerInterface.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371139520072" ignored="false" />
-    <file path="/DataHandlerImpl.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371139736152" ignored="false" />
+    <file path="/DataHandlerInterface.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371142177091" ignored="false" />
+    <file path="/DataHandlerImpl.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371143370533" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +84,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="36" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.6275395">
+            <state line="33" column="49" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.64108354">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,7 +113,7 @@
       <file leaf-file-name="DataHandlerInterface.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="59" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
+            <state line="30" column="96" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +122,7 @@
       <file leaf-file-name="DataHandlerImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="31" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
+            <state line="108" column="78" selection-start="3449" selection-end="3449" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,10 +159,10 @@
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerImpl.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/Connection.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/MySQLConnection.java" />
-        <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerInterface.java" />
-        <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerImpl.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerInterface.java" />
+        <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerInterface.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerImpl.java" />
       </list>
     </option>
   </component>
@@ -272,20 +267,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ddbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeekCalendar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WeekCalendar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -497,7 +478,11 @@
       <created>1370888705171</created>
       <updated>1370888705171</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="New feature, get the names of all workers in the database, and get the connection.">
+      <created>1371139937656</created>
+      <updated>1371139937656</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -512,13 +497,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.67094016" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28606158" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -684,22 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="59" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="31" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="68" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
@@ -707,9 +676,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="96" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="78" selection-start="3449" selection-end="3449" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="36" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.6275395">
+        <state line="33" column="49" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.64108354">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

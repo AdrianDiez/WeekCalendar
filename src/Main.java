@@ -30,7 +30,7 @@ public class Main {
         if(connection.connect()) {
             DataHandlerInterface dh = new DataHandlerImpl(connection);
             try {
-                String[] result = dh.getNamesOfWorkers();
+                String[] result = dh.getWeekCalendar("2013-06-01","2013-06-03","MONICA");
                 System.out.println(result[0]);
             } catch (SQLException e) {
                 e.printStackTrace();
