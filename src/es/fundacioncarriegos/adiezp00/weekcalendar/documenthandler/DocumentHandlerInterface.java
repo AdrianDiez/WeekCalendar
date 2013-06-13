@@ -1,10 +1,5 @@
 package es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler;
 
-
-import com.itextpdf.text.DocumentException;
-
-import java.io.FileNotFoundException;
-
 /**
  * Created with IntelliJ IDEA.
  * @author adrian
@@ -67,5 +62,5 @@ public interface DocumentHandlerInterface {
      *
      * @return true if all is correct, false if not.
      */
-    public boolean parseToPDF() throws FileNotFoundException, DocumentException;
+    public boolean parseToPDF();
 }

@@ -19,6 +19,7 @@ public class TextDocument {
     /** The buffer to write */
     private PrintWriter printWritter;
 
+    /** The path of the file */
     private String path;
 
 
@@ -38,24 +39,11 @@ public class TextDocument {
             }
         }
         this.printWritter = new PrintWriter(new FileWriter(this.file));
-        this.writeAndClose(content);
-    }
-
-    /**
-     * Medium constructor.
-     *
-     * @param path to set.
-     * @throws IOException
-     */
-    public TextDocument(String path) throws IOException {
-        this.path = path;
-        this.file = new File(this.path + "temp.txt");
-        if(this.file.exists()) {
-            this.printWritter = new PrintWriter(new FileWriter(this.file));
-        } else {
-            this.printWritter = null;
+        if(!this.writeAndClose(content)) {
+            System.exit(0);
         }
     }
+
 
     /**
      * Getter of path
@@ -64,15 +52,6 @@ public class TextDocument {
      */
     public String getPath() {
         return this.path;
-    }
-
-    /**
-     * Getter of File
-     *
-     * @return the file
-     */
-    public File getFile() {
-        return this.file;
     }
 
     /**
@@ -138,7 +117,7 @@ public class TextDocument {
      * @return the lines separated by "/n".
      */
     public String readAll(){
-        String result;
+        String result  = "";
         BufferedReader bufferedReader;
         try {
             bufferedReader = new BufferedReader(new FileReader(this.file));

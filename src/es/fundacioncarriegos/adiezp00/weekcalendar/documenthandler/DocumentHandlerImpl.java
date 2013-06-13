@@ -21,6 +21,8 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
 
     /** The document */
     private TextDocument doc;
+
+    /** The PDF document */
     private Document PDFDocument;
 
     /**
@@ -132,14 +134,4 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
     private String[] parseToArray() {
         return this.readAll().split("\n");
     }
-
-    /**
-     * Getter of the PDF Document.
-     *
-     * @return PDFDocument.
-     */
-    public Document getPDFDocument() {
-        return PDFDocument;
-    }
-
 }
