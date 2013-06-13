@@ -32,7 +32,7 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
      */
     public DocumentHandlerImpl(TextDocument doc) {
         this.setDocument(doc);
-        this.PDFDocument = new Document(PageSize.A4.rotate());
+        this.PDFDocument = new Document(PageSize.A4_LANDSCAPE.rotate());
     }
 
     /**

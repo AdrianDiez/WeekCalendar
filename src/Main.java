@@ -2,6 +2,9 @@ import com.itextpdf.text.DocumentException;
 import es.fundacioncarriegos.adiezp00.weekcalendar.ddbb.DataHandlerImpl;
 import es.fundacioncarriegos.adiezp00.weekcalendar.ddbb.DataHandlerInterface;
 import es.fundacioncarriegos.adiezp00.weekcalendar.ddbb.MySQLConnection;
+import es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler.DocumentHandlerImpl;
+import es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler.DocumentHandlerInterface;
+import es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler.TextDocument;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -18,20 +21,18 @@ import java.sql.SQLException;
 public class Main {
 
     public static void main(String[] args) throws IOException, DocumentException {
-        /*
-        TextDocument td = new TextDocument("/Users/adrian/Desktop/","Prueba del calendario de producción.");
-        DocumentHandlerInterface dh = new DocumentHandlerImpl(td);
-        if(dh.parseToPDF() && dh.delete()) {
-            System.exit(1);
-        } else {
-            System.exit(0);
-        }*/
         MySQLConnection connection = new MySQLConnection();
         if(connection.connect()) {
             DataHandlerInterface dh = new DataHandlerImpl(connection);
             try {
                 String[] result = dh.getWeekCalendar("2013-06-01","2013-06-03","MONICA");
-                System.out.println(result[0]);
+                TextDocument td = new TextDocument("/Users/adrian/Desktop/",result[0]);
+                DocumentHandlerInterface doch = new DocumentHandlerImpl(td);
+                if(doch.parseToPDF() && doch.delete()) {
+                    System.exit(1);
+                } else {
+                    System.exit(0);
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
