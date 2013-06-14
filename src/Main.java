@@ -28,8 +28,8 @@ public class Main {
                 String[] result = dh.getWeekCalendar("2013-06-01","2013-06-03","MONICA");
                 dh.close();
                 TextDocument td = new TextDocument("/Users/adrian/Desktop/",result[0]);
-                DocumentHandlerInterface doch = new DocumentHandlerImpl(td);
-                if(doch.parseToPDF() && doch.delete()) {
+                DocumentHandlerInterface doc = new DocumentHandlerImpl(td);
+                if(doc.parseToPDF() && doc.delete() && connection.disconnect()) {
                     System.exit(1);
                 } else {
                     System.exit(0);

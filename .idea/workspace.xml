@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a30de2a-e750-421d-a896-0e3b19029bb3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/test/DataHandlerImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/datehandler/DateFormatImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/datehandler/test/DateFormatImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/datehandler/DateFormatInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/exceptions/NonValidDateException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/datehandler/WeekManufacturerInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeekCalendar.iml" afterPath="$PROJECT_DIR$/WeekCalendar.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="dc08e280-d185-4d39-b8a9-93f2c3cad8f0" name="Rejected commit: Default" comment="Some bug solvented, and the source is improved." />
@@ -19,9 +12,9 @@
     <file path="/fragment.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371227401829" ignored="false" />
     <file path="/DocumentHandlerImpl.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371144158028" ignored="false" />
     <file path="/Document.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370626834215" ignored="false" />
-    <file path="/Main.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371224865079" ignored="false" />
+    <file path="/Main.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371228443377" ignored="false" />
     <file path="/TextDocument.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370967689332" ignored="false" />
-    <file path="/Dummy.txt" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371224639767" ignored="false" />
+    <file path="/Dummy.txt" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371228384248" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/relaxng.rng" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370963629707" ignored="false" />
     <file path="/Connection.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370971489820" ignored="false" />
     <file path="/MySQLConnection.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370973579347" ignored="false" />
@@ -93,30 +86,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="23" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQLConnection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/MySQLConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="22" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataHandlerImplTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/test/DataHandlerImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="61" selection-start="683" selection-end="683" vertical-scroll-proportion="0.46735904">
+            <state line="23" column="60" selection-start="901" selection-end="968" vertical-scroll-proportion="0.44362018">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,7 +127,6 @@
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerInterface.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerInterface.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerImpl.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/dateformat/DateFormatInterface.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/datehandler/WeekManufacturerInterface.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/datehandler/DateFormatImplTest.java" />
@@ -164,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/exceptions/NonValidDateException.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerImpl.java" />
         <option value="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/test/DataHandlerImplTest.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -262,7 +235,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="IntelliLang.Configuration" />
+    <property name="options.lastSelected" value="fileTemplates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/MySQL/mysql-connector-java-5.1.25-bin.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -535,7 +508,11 @@
       <created>1371144580816</created>
       <updated>1371144580816</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="New features in datehandler, with a new dateformat and new interface for weekcalendar.&#10;Some test created.">
+      <created>1371228390031</created>
+      <updated>1371228390031</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -609,7 +586,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Little changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="New features in datehandler, with a new dateformat and new interface for weekcalendar.&#10;Some test created." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -628,6 +605,7 @@
     <MESSAGE value="New feature, get the names of all workers in the database, and get the connection." />
     <MESSAGE value="Get the WeekCalendar implemented" />
     <MESSAGE value="Little changes." />
+    <MESSAGE value="New features in datehandler, with a new dateformat and new interface for weekcalendar.&#10;Some test created." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -732,23 +710,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/MySQLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="22" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.0">
+        <state line="55" column="19" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.6216617">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/test/DataHandlerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="23" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
+        <state line="21" column="61" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0652819">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/test/DataHandlerImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="61" selection-start="683" selection-end="683" vertical-scroll-proportion="0.46735904">
+        <state line="23" column="60" selection-start="901" selection-end="968" vertical-scroll-proportion="0.44362018">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
