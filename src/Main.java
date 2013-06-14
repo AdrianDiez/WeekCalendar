@@ -26,6 +26,7 @@ public class Main {
             DataHandlerInterface dh = new DataHandlerImpl(connection);
             try {
                 String[] result = dh.getWeekCalendar("2013-06-01","2013-06-03","MONICA");
+                dh.close();
                 TextDocument td = new TextDocument("/Users/adrian/Desktop/",result[0]);
                 DocumentHandlerInterface doch = new DocumentHandlerImpl(td);
                 if(doch.parseToPDF() && doch.delete()) {
