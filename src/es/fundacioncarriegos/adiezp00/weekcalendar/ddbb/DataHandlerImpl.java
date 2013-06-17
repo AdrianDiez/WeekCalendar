@@ -101,10 +101,17 @@ public class DataHandlerImpl implements DataHandlerInterface {
             do {
                 // Space for format Strings
                 String SPACE = "         ";
-                result[i++] = rs.getString("fecha") + SPACE + rs.getString("hora_inicio")
-                + SPACE + rs.getString("hora_fin") + SPACE + rs.getString("lugar")
-                + SPACE + rs.getString("caballo") + SPACE + rs.getString("nombre_alumno")
-                + SPACE + rs.getString("nombre_proyecto") + SPACE + "FIRMA AQUI.";
+                String date = rs.getString("fecha");
+                String start = rs.getString("hora_inicio");
+                String end = rs.getString("hora_fin");
+                String place = rs.getString("lugar");
+                String horse = rs.getString("caballo");
+                String name = rs.getString("nombre_alumno");
+                String project = rs.getString("nombre_proyecto");
+                result[i++] = this.checkNull(date) + SPACE + this.checkNull(start)
+                + SPACE + this.checkNull(end) + SPACE + this.checkNull(place)
+                + SPACE + this.checkNull(horse) + SPACE + this.checkNull(name)
+                + SPACE + this.checkNull(project) + SPACE + "FIRMA AQUI.";
             } while(rs.next());
             stat.close();
         } else {
@@ -112,6 +119,14 @@ public class DataHandlerImpl implements DataHandlerInterface {
             result = new String[2];
             result[0] = "Connection closed, you will spoke with your Admin.";
             result[1] = "END_ACK";
+        }
+        return result;
+    }
+
+    private String checkNull(String data) {
+        String result = data;
+        if(data == null) {
+            result = "SIN INTRODUCIR";
         }
         return result;
     }

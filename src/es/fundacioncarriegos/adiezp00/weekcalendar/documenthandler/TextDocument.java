@@ -30,7 +30,7 @@ public class TextDocument {
      * @param content to set
      * @throws IOException
      */
-    public TextDocument(String path, String content) throws IOException {
+    public TextDocument(String path, String[] content) throws IOException {
         this.path = path;
         this.file = new File(this.path + "temp.txt");
         if(!this.file.exists()) {
@@ -39,9 +39,12 @@ public class TextDocument {
             }
         }
         this.printWritter = new PrintWriter(new FileWriter(this.file));
-        if(!this.writeAndClose(content)) {
-            System.exit(0);
+        for(String paragraph : content) {
+            if(!this.write(paragraph + "\n")) {
+                System.exit(0);
+            }
         }
+        this.close();
     }
 
 
@@ -75,6 +78,7 @@ public class TextDocument {
     public boolean write(String content) {
         boolean result;
         this.printWritter.write(content);
+        //this.printWritter.write(" " + "\n");
         result = true;
         return result;
     }

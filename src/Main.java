@@ -1,4 +1,6 @@
 import com.itextpdf.text.DocumentException;
+import es.fundacioncarriegos.adiezp00.weekcalendar.datehandler.WeekManufacturerImpl;
+import es.fundacioncarriegos.adiezp00.weekcalendar.datehandler.WeekManufacturerInterface;
 import es.fundacioncarriegos.adiezp00.weekcalendar.ddbb.DataHandlerImpl;
 import es.fundacioncarriegos.adiezp00.weekcalendar.ddbb.DataHandlerInterface;
 import es.fundacioncarriegos.adiezp00.weekcalendar.ddbb.MySQLConnection;
@@ -25,9 +27,11 @@ public class Main {
         if(connection.connect()) {
             DataHandlerInterface dh = new DataHandlerImpl(connection);
             try {
-                String[] result = dh.getWeekCalendar("2013-06-01","2013-06-03","MONICA");
+                WeekManufacturerInterface wmi = new WeekManufacturerImpl();
+                String[] currentWeek = wmi.thisWeek();
+                String[] result = dh.getWeekCalendar(currentWeek[0],currentWeek[1],"NIRAVA");
                 dh.close();
-                TextDocument td = new TextDocument("/Users/adrian/Desktop/",result[0]);
+                TextDocument td = new TextDocument("/Users/adrian/Desktop/",result);
                 DocumentHandlerInterface doc = new DocumentHandlerImpl(td);
                 if(doc.parseToPDF() && doc.delete() && connection.disconnect()) {
                     System.exit(1);

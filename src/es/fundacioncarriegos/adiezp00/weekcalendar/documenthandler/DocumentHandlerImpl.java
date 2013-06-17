@@ -1,9 +1,7 @@
 package es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler;
 
 
-import com.itextpdf.text.Document;
-import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import java.io.*;
@@ -111,14 +109,18 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
     public boolean parseToPDF() {
         boolean result;
         try {
+            //TODO Añadir header con imagen http://what-when-how.com/itext-5/adding-page-events-to-pdfwriter-itext-5/
             String[] arrayText = this.parseToArray();
             OutputStream PDFFile = new FileOutputStream(new File(this.doc.getPath() + "WeekCalendar.pdf"));
             PdfWriter.getInstance(this.PDFDocument, PDFFile);
             this.PDFDocument.open();
+            Paragraph p;
             for(String oneLine : arrayText) {
-                PDFDocument.add(new Paragraph(oneLine));
+                p = new Paragraph(oneLine,FontFactory.getFont("arial",9));
+                p.setSpacingAfter(15);
+                this.PDFDocument.add(p);
             }
-            PDFDocument.close();
+            this.PDFDocument.close();
             result = true;
         } catch (Exception e) {
             result = false;
