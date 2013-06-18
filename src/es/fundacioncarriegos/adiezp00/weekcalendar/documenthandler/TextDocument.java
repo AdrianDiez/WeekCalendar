@@ -17,11 +17,10 @@ public class TextDocument {
     private File file;
 
     /** The buffer to write */
-    private PrintWriter printWritter;
+    private PrintWriter printWriter;
 
     /** The path of the file */
     private String path;
-
 
     /**
      * Complex constructor
@@ -38,7 +37,7 @@ public class TextDocument {
                 System.exit(0);
             }
         }
-        this.printWritter = new PrintWriter(new FileWriter(this.file));
+        this.printWriter = new PrintWriter(new FileWriter(this.file));
         for(String paragraph : content) {
             if(!this.write(paragraph + "\n")) {
                 System.exit(0);
@@ -64,7 +63,7 @@ public class TextDocument {
      */
     public boolean close() {
         boolean result;
-        this.printWritter.close();
+        this.printWriter.close();
         result = true;
         return result;
     }
@@ -77,8 +76,7 @@ public class TextDocument {
      */
     public boolean write(String content) {
         boolean result;
-        this.printWritter.write(content);
-        //this.printWritter.write(" " + "\n");
+        this.printWriter.write(content);
         result = true;
         return result;
     }
