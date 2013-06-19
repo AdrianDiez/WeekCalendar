@@ -1,10 +1,9 @@
 package es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler;
 
 import com.itextpdf.text.*;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfPageEventHelper;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.draw.LineSeparator;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,12 +29,8 @@ class MyHeader extends PdfPageEventHelper {
                     FontFactory.getFont("times new roman",35,Font.UNDERLINE,new BaseColor(0,176,246)));
             p.setIndentationLeft(130);
             document.add(p);
-            PdfPTable myTable = new PdfPTable(1);
-            PdfPCell myCell = new PdfPCell();
-            myCell.setBorder(Rectangle.BOTTOM);
-            myTable.addCell(myCell);
-            myTable.setSpacingBefore(30);
-            document.add(myTable);
+            LineSeparator lineSeparator = new LineSeparator();
+            document.add(new Chunk(lineSeparator));
         } catch (DocumentException e) {
             System.exit(0);
         }

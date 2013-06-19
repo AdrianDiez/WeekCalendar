@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a30de2a-e750-421d-a896-0e3b19029bb3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerImpl.java" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/MyHeader.java" afterPath="$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/MyHeader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -15,7 +14,7 @@
     <file path="/Document.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370626834215" ignored="false" />
     <file path="/Main.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371492063772" ignored="false" />
     <file path="/TextDocument.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371495014414" ignored="false" />
-    <file path="/Dummy.txt" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371655251030" ignored="false" />
+    <file path="/Dummy.txt" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371659963654" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/relaxng.rng" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370963629707" ignored="false" />
     <file path="/Connection.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370971489820" ignored="false" />
     <file path="/MySQLConnection.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1370973579347" ignored="false" />
@@ -30,7 +29,7 @@
     <file path="/MainWindow.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371288422792" ignored="false" />
     <file path="/MainFrame.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371289158995" ignored="false" />
     <file path="/WeekManufacturerImpl.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371488050214" ignored="false" />
-    <file path="/MyHeader.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371658071834" ignored="false" />
+    <file path="/MyHeader.java" changelist="8a30de2a-e750-421d-a896-0e3b19029bb3" time="1371660065017" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -82,6 +80,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -100,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyHeader.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MyHeader.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/MyHeader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="34" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.0">
+            <state line="31" column="62" selection-start="948" selection-end="948" vertical-scroll-proportion="0.689911">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentHandlerImpl.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DocumentHandlerImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="22" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.6364985">
+            <state line="128" column="22" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -223,12 +222,12 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -339,19 +338,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -377,6 +363,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -532,7 +531,11 @@
       <created>1371574314744</created>
       <updated>1371574314744</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="One line in the report to divide the header and the content">
+      <created>1371659653056</created>
+      <updated>1371659653056</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -557,7 +560,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -572,8 +575,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.67094016" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28606158" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28606158" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32763532" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.67094016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -627,7 +630,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding some media and headers to the report." />
+    <option name="LAST_COMMIT_MESSAGE" value="One line in the report to divide the header and the content" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -650,6 +653,7 @@
     <MESSAGE value="Little changes only." />
     <MESSAGE value="Little bug fixed, now if one data is null, in the report shows SIN INTRODUCIR not null. Added feature that let you obtain the report for current week (Sunday-Sunday)." />
     <MESSAGE value="Adding some media and headers to the report." />
+    <MESSAGE value="One line in the report to divide the header and the content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -696,18 +700,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="19" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="64" column="19" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="44" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="31" column="44" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/ddbb/DataHandlerInterface.java">
@@ -737,19 +735,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/MyHeader.java">
+    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="34" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="128" column="22" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/DocumentHandlerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/es/fundacioncarriegos/adiezp00/weekcalendar/documenthandler/MyHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="22" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.6364985">
-          <folding />
+        <state line="31" column="62" selection-start="948" selection-end="948" vertical-scroll-proportion="0.689911">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
