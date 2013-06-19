@@ -109,7 +109,6 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
     public boolean parseToPDF() {
         boolean result;
         try {
-            //TODO Añadir header con imagen http://what-when-how.com/itext-5/adding-page-events-to-pdfwriter-itext-5/
             String[] arrayText = this.parseToArray();
             OutputStream PDFFile = new FileOutputStream(new File(this.doc.getPath() + "WeekCalendar.pdf"));
             PdfWriter writer = PdfWriter.getInstance(this.PDFDocument, PDFFile);
