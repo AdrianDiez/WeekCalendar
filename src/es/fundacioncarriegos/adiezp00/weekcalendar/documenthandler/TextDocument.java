@@ -46,7 +46,6 @@ public class TextDocument {
         this.close();
     }
 
-
     /**
      * Getter of path
      *
@@ -90,6 +89,7 @@ public class TextDocument {
     public boolean writeAndClose(String content) {
         return(this.write(content) && this.close());
     }
+
     /**
      * Delete the document
      *
@@ -99,6 +99,11 @@ public class TextDocument {
         return this.file.delete();
     }
 
+    /**
+     * Read only one line in the file.
+     *
+     * @return the line.
+     */
     public String readLine() {
         String result;
         BufferedReader bufferedReader;
@@ -130,7 +135,6 @@ public class TextDocument {
         } catch (Exception e) {
             result = "readAllException";
         }
-
         return result;
     }
 }
