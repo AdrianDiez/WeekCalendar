@@ -1,4 +1,5 @@
-import com.itextpdf.text.DocumentException;
+package es.fundacioncarriegos.adiezp00.weekcalendar;
+
 import es.fundacioncarriegos.adiezp00.weekcalendar.datehandler.WeekManufacturerImpl;
 import es.fundacioncarriegos.adiezp00.weekcalendar.datehandler.WeekManufacturerInterface;
 import es.fundacioncarriegos.adiezp00.weekcalendar.ddbb.DataHandlerImpl;
@@ -20,26 +21,26 @@ import java.sql.SQLException;
  *          All right reserved.
  * @since 07/06/13 20:29
  */
-public class Main {
+public class Run {
 
-    public static void main(String[] args) throws IOException, DocumentException {
+    public static void run(String[] args) throws IOException {
         MySQLConnection connection = new MySQLConnection();
         if(connection.connect()) {
             DataHandlerInterface dh = new DataHandlerImpl(connection);
             try {
-                WeekManufacturerInterface wmi = new WeekManufacturerImpl();
-                String[] currentWeek = wmi.thisWeek();
-                String[] result = dh.getWeekCalendar(currentWeek[0],currentWeek[1],"NIRAVA");
+                String[] result = dh.getWeekCalendar(args[0],args[1],args[2]);
                 dh.close();
                 TextDocument td = new TextDocument("/Users/adrian/Desktop/",result);
                 DocumentHandlerInterface doc = new DocumentHandlerImpl(td);
                 if(doc.parseToPDF() && doc.delete() && connection.disconnect()) {
                     System.exit(1);
+                    //TODO cambiar por un dialog
                 } else {
                     System.exit(0);
+                    //TODO cambiar por un dialog.
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                //TODO cambiar por un dialog.
             }
         }
     }

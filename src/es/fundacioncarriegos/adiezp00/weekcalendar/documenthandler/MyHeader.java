@@ -44,7 +44,7 @@ class MyHeader extends PdfPageEventHelper {
      */
     public void onStartPage(PdfWriter writer, Document document) {
         try {
-            Image image = Image.getInstance("../resources/LOGO.png");
+            Image image = Image.getInstance(MyHeader.class.getClassLoader().getResource("LOGO.png"));
             image.scaleToFit(100, 100);
             image.setAbsolutePosition(50, 500);
             image.setAlignment(Element.ALIGN_TOP);
