@@ -4,6 +4,9 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPageEventHelper;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.draw.LineSeparator;
+import es.fundacioncarriegos.adiezp00.weekcalendar.gui.MainWindow;
+
+import javax.swing.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,7 +35,7 @@ class MyHeader extends PdfPageEventHelper {
             LineSeparator lineSeparator = new LineSeparator();
             document.add(new Chunk(lineSeparator));
         } catch (DocumentException e) {
-            System.exit(0);
+            JOptionPane.showMessageDialog(MainWindow.getFrame(), "Error en la ejecución del programa.");
         }
     }
 
@@ -53,7 +56,7 @@ class MyHeader extends PdfPageEventHelper {
             p.setSpacingAfter(70);
             document.add(p);
         } catch (Exception e) {
-            System.exit(0);
+            JOptionPane.showMessageDialog(MainWindow.getFrame(), "Error en la ejecución del programa.");
         }
     }
 }

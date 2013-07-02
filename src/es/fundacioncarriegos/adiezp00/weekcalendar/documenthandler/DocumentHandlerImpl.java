@@ -110,10 +110,11 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
         boolean result;
         try {
             String[] arrayText = this.parseToArray();
-            OutputStream PDFFile = new FileOutputStream(new File(this.doc.getPath() + "WeekCalendar.pdf"));
+            OutputStream PDFFile = new FileOutputStream(new File(this.doc.getPath() + ".pdf"));
             PdfWriter writer = PdfWriter.getInstance(this.PDFDocument, PDFFile);
             MyHeader event = new MyHeader();
             writer.setPageEvent(event);
+            // The document must be open too!
             this.PDFDocument.open();
             Paragraph p;
             for(String oneLine : arrayText) {
