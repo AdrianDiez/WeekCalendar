@@ -105,17 +105,17 @@ public class JCalendar extends JPanel {
 
     /** Construct a JCalendar initialized to display the current month and year. */
     public JCalendar() {
-        // initialize with current month and year
+        // Initialize with current month and year
         Calendar calendar = Calendar.getInstance();
         month = calendar.get(Calendar.MONTH);
         year = calendar.get(Calendar.YEAR);
 
-        // pick a preferred size
+        // Pick a preferred size
         setPreferredSize(new Dimension(200, 150));
         setMaximumSize(getPreferredSize());
         setMinimumSize(getPreferredSize());
 
-        // mouse interactions
+        // Mouse interactions
         this.addMouseMotionListener(mouseMotionListener);
         this.addMouseListener(mouseListener);
     }

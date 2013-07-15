@@ -2,8 +2,10 @@ package es.fundacioncarriegos.adiezp00.weekcalendar.documenthandler;
 
 
 import com.itextpdf.text.*;
+import com.itextpdf.text.Font;
 import com.itextpdf.text.pdf.*;
 
+import java.awt.*;
 import java.io.*;
 
 /**
@@ -22,6 +24,15 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
 
     /** The PDF document */
     private Document PDFDocument;
+
+    /** The current date */
+    private String currentDate = "";
+
+    /** The current hour */
+    private String currentInitHour = "";
+
+    /** Format value */
+    private final String SPACE = "       ";
 
     /**
      * Constructor of the class
@@ -116,12 +127,41 @@ public class DocumentHandlerImpl implements DocumentHandlerInterface {
             writer.setPageEvent(event);
             // The document must be open too!
             this.PDFDocument.open();
+            PdfPTable table = new PdfPTable(7);
+            float[] cellSize = {2.5f, 4.00f, 8.00f, 2.25f, 2.25f, 3f, 5.00f};
+            table.setWidths(cellSize);
+            PdfPCell cell;
             Paragraph p;
             for(String oneLine : arrayText) {
-                p = new Paragraph(oneLine,FontFactory.getFont("arial",9));
-                p.setSpacingAfter(15);
-                this.PDFDocument.add(p);
+                String[] fields = oneLine.split(",");
+                if(this.currentDate.compareTo(fields[0]) != 0) {
+                    p = new Paragraph(fields[0],FontFactory.getFont("arial",9));
+                    this.currentDate = fields[0];
+                    cell = new PdfPCell(p);
+                } else {
+                    p = new Paragraph(this.SPACE,FontFactory.getFont("arial", 9));
+                    cell = new PdfPCell(p);
+                    cell.setBorder(0);
+                }
+                cell.setMinimumHeight(40);
+                table.addCell(cell);
+                if(this.currentInitHour.compareTo(fields[1]) != 0) {
+                    p = new Paragraph(fields[1] + ":" + fields[2],FontFactory.getFont("arial",9));
+                    this.currentInitHour = fields[1];
+                    cell = new PdfPCell(p);
+                } else {
+                    p = new Paragraph(this.SPACE,FontFactory.getFont("arial", 9));
+                    cell = new PdfPCell(p);
+                    cell.setBorder(0);
+                }
+                table.addCell(cell);
+                table.addCell(new PdfPCell(new Paragraph(fields[3],FontFactory.getFont("arial",9, Font.BOLD))));
+                table.addCell(new PdfPCell(new Paragraph(fields[4],FontFactory.getFont("arial",9))));
+                table.addCell(new PdfPCell(new Paragraph(fields[5],FontFactory.getFont("arial",9))));
+                table.addCell(new PdfPCell(new Paragraph(fields[6],FontFactory.getFont("arial",9))));
+                table.addCell(new PdfPCell(new Paragraph(fields[7] + this.SPACE,FontFactory.getFont("arial",9, Font.ITALIC))));
             }
+            this.PDFDocument.add(table);
             this.PDFDocument.close();
             result = true;
         } catch (Exception e) {

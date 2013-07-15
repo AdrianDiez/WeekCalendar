@@ -90,7 +90,8 @@ public class DataHandlerImpl implements DataHandlerInterface {
                 "FROM alumno_sesion " +
                 "WHERE fecha >= '" + dateInit + "' " +
                 "AND fecha <= '" + dateEnd + "' " +
-                "AND nombre_responsable = '" + person + "';";
+                "AND nombre_responsable = '" + person + "'" +
+                "ORDER BY fecha, hora_inicio, nombre_alumno;";
         String[] result;
         // Must be connected! Take care about that.
         if(!con.isClosed()) {
@@ -99,8 +100,8 @@ public class DataHandlerImpl implements DataHandlerInterface {
             ResultSet rs = stat.executeQuery(query);
             result = new String[this.numberOfRows(rs)];
             do {
-                // Space for format Strings
-                String SPACE = "         ";
+                // Comma for format Strings
+                String SPACE = ",";
                 String date = rs.getString("fecha");
                 String start = rs.getString("hora_inicio");
                 String end = rs.getString("hora_fin");
@@ -109,8 +110,8 @@ public class DataHandlerImpl implements DataHandlerInterface {
                 String name = rs.getString("nombre_alumno");
                 String project = rs.getString("nombre_proyecto");
                 result[i++] = this.checkNull(date) + SPACE + this.checkNull(start)
-                + SPACE + this.checkNull(end) + SPACE + this.checkNull(place)
-                + SPACE + this.checkNull(horse) + SPACE + this.checkNull(name)
+                + SPACE + this.checkNull(end) + SPACE + this.checkNull(name)
+                + SPACE + this.checkNull(horse) + SPACE + this.checkNull(place)
                 + SPACE + this.checkNull(project) + SPACE + "FIRMA AQUI.";
             } while(rs.next());
             stat.close();

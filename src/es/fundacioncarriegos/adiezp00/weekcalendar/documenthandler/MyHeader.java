@@ -4,6 +4,7 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPageEventHelper;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.draw.LineSeparator;
+import es.fundacioncarriegos.adiezp00.weekcalendar.MainRunner;
 import es.fundacioncarriegos.adiezp00.weekcalendar.gui.MainWindow;
 
 import javax.swing.*;
@@ -28,14 +29,15 @@ class MyHeader extends PdfPageEventHelper {
     public void onOpenDocument(PdfWriter writer, Document document) {
         Paragraph p;
         try {
-            p = new Paragraph("CALENDARIO DE PRODUCCIÓN",
+            p = new Paragraph("CALENDARIO DE " + MainRunner.getName(),
                     FontFactory.getFont("times new roman",35,Font.UNDERLINE,new BaseColor(0,176,246)));
             p.setIndentationLeft(130);
             document.add(p);
             LineSeparator lineSeparator = new LineSeparator();
             document.add(new Chunk(lineSeparator));
         } catch (DocumentException e) {
-            JOptionPane.showMessageDialog(MainWindow.getFrame(), "Error en la ejecución del programa.");
+            JOptionPane.showMessageDialog(MainWindow.getFrame(), "Error en la ejecución del programa.",
+                    "¡ERROR!", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -56,7 +58,8 @@ class MyHeader extends PdfPageEventHelper {
             p.setSpacingAfter(70);
             document.add(p);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(MainWindow.getFrame(), "Error en la ejecución del programa.");
+            JOptionPane.showMessageDialog(MainWindow.getFrame(), "Error en la ejecución del programa.",
+                    "¡ERROR!", JOptionPane.ERROR_MESSAGE);
         }
     }
 }

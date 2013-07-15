@@ -21,26 +21,43 @@ import java.sql.SQLException;
  *          All right reserved.
  * @since 07/06/13 20:29
  */
-public class Run {
+public class MainRunner {
 
+    /** The name of the teacher */
+    private static String name;
+
+    /**
+     * Main class.
+     *
+     * @param args String[]
+     * @throws IOException
+     */
     public static void run(String[] args) throws IOException {
         MySQLConnection connection = new MySQLConnection();
         if(connection.connect()) {
             DataHandlerInterface dh = new DataHandlerImpl(connection);
             try {
-                //TODO ¡Valorar si no ha introducido ninguna fecha, o nombre!
+                name = args[2];
+                //TODO ¡Valorar si no ha introducido ninguna fecha, una fecha, o ningun nombre!
                 String[] result = dh.getWeekCalendar(args[0],args[1],args[2]);
                 dh.close();
                 TextDocument td = new TextDocument(args[3],result);
                 DocumentHandlerInterface doc = new DocumentHandlerImpl(td);
                 if(doc.parseToPDF() && doc.delete() && connection.disconnect()) {
-                    JOptionPane.showMessageDialog(MainWindow.getFrame(), "Se ha creado el calendario de " + args[2] + " correctamente.");
+                    JOptionPane.showMessageDialog(MainWindow.getFrame(), "Se ha creado el calendario de " + args[2] + " correctamente.",
+                            "¡CORRECTO!",JOptionPane.INFORMATION_MESSAGE);
                 } else {
-                    JOptionPane.showMessageDialog(MainWindow.getFrame(), "Error en la ejecución del programa.");
+                    JOptionPane.showMessageDialog(MainWindow.getFrame(), "Error en la ejecución del programa.",
+                            "¡ERROR!",JOptionPane.ERROR_MESSAGE);
                 }
             } catch (SQLException e) {
-                JOptionPane.showMessageDialog(MainWindow.getFrame(), "Problema con la base de datos, comprobar el servidor.");
+                JOptionPane.showMessageDialog(MainWindow.getFrame(), "Problema con la base de datos, comprobar el servidor.",
+                        "¡ERROR!", JOptionPane.ERROR_MESSAGE);
             }
         }
+    }
+
+    public static String getName() {
+        return name;
     }
 }
